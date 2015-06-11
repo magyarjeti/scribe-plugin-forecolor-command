@@ -1,4 +1,4 @@
-define("scribe-plugin-forecolor-command", ['scribe-common/src/element'], function($__0) {
+define("scribe-plugin-forecolor-command", ['element'], function($__0) {
   "use strict";
   var __moduleName = "scribe-plugin-forecolor-command";
   if (!$__0 || !$__0.__esModule)
