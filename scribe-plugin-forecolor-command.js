@@ -1,9 +1,6 @@
-define("scribe-plugin-forecolor-command", ['element'], function($__0) {
+define("scribe-plugin-forecolor-command", [], function() {
   "use strict";
   var __moduleName = "scribe-plugin-forecolor-command";
-  if (!$__0 || !$__0.__esModule)
-    $__0 = {default: $__0};
-  var Element = $__0.default;
   var $__default = function() {
     return function(scribe) {
       var foreColorCommand = new scribe.api.Command('foreColor');
@@ -15,8 +12,8 @@ define("scribe-plugin-forecolor-command", ['element'], function($__0) {
           }
           node.style.color = "";
           clean(node);
-          if (node.attributes.length == 1 && !node.getAttribute('style')) {
-            Element.unwrap(root, node);
+          if (node.attributes.length === 1 && !node.getAttribute('style')) {
+            scribe.node.unwrap(root, node);
             i--;
           }
         }
