@@ -1,5 +1,3 @@
-import Element from 'element';
-
 export default function() {
     return function(scribe) {
         var foreColorCommand = new scribe.api.Command('foreColor');
@@ -14,8 +12,8 @@ export default function() {
                 node.style.color = "";
                 clean(node);
 
-                if (node.attributes.length == 1 && !node.getAttribute('style')) {
-                    Element.unwrap(root, node);
+                if (node.attributes.length === 1 && !node.getAttribute('style')) {
+                    scribe.node.unwrap(root, node);
                     i--;
                 }
             }
